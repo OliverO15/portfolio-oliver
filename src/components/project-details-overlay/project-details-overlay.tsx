@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Project } from "../../types/globals";
 import "./project-details-overlay.css";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 
 const ProjectDetailsOverlay = (props: any) => {
@@ -74,6 +74,22 @@ const ProjectDetailsOverlay = (props: any) => {
                 </div>
               ))}
             </div>
+            {project.links && project.links.length > 0 && (
+              <div className="row warp links-list">
+                {project.links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button row"
+                  >
+                    <FontAwesomeIcon icon={faGlobe} />
+                    {link.title}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

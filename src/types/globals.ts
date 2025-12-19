@@ -6,4 +6,10 @@ export type Project = {
   technologies: string[];
   roles: string[];
   aspectRatio: string;
+  links?: ProjectLink[];
+};
+
+export type ProjectLink = {
+  title: string;
+  url: string;
 };

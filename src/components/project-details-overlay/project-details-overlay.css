@@ -60,6 +60,10 @@
 
   transition: all 0.3s ease-in-out;
 
+  h1 {
+    padding: 0 60px;
+  }
+
   .project-images {
     overflow-x: scroll;
     width: 100%;
@@ -90,12 +94,24 @@
   }
 }
 
+.link-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(11, 11, 11);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgb(25, 25, 25);
+    color: white;
+  }
+}
+
 @media (max-width: 768px) {
   .project-details-content {
-    h1 {
-      padding: 0 60px;
-    }
-
     .project-images {
       height: 350px;
     }

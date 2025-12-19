@@ -8,10 +8,16 @@
       "/project_images/quickflick2.png",
       "/project_images/quickflick3.png"
     ],
-    "description": "Quickflick is an AI video creation and editing platform built to make video creation easy and accessable for everyone. My main role for this project which I worked on for 2 years was front-end development, UI and UX design working closely with the product owner and CEO of the company.\n\nWe challenged us every day to come up with different ways to make video creation easier, and our motto was always 'Can my grandma do this?', we utilized AI on the platform to make ...",
+    "description": "Quickflick is an AI-powered video creation and editing platform designed to make video production fast and accessible for everyone.\n\nI worked on this project for two years as the lead front-end developer and UI/UX designer, collaborating closely with the product owner and CEO.\n\nOur mission was to simplify the entire video creation process. We constantly explored new ways to reduce complexity, guided by the question: “Can my grandmother do this?” The platform integrates AI to assist with script generation, voice-overs, and selecting relevant media for each scene.\n\nMy work included designing and implementing the UI for all areas of the platform, building user flows, interaction patterns, and layouts from concept to code. I also created advertising and promotional material, drawing on my background in motion graphics and filmmaking.\n\nIn addition, I helped develop a robust internal admin environment where we controlled the AI pipeline, using custom prompts, adjustable model settings, and workflow checkpoints to manage how different AI models contributed to the final video output.",
     "technologies": ["Vanilla Javascript", "PHP", "CSS", "HTML"],
     "roles": ["Front-End Dev", "UI/UX Design"],
-    "aspectRatio": "hero"
+    "aspectRatio": "hero",
+    "links": [
+      {
+        "title": "quickflick.ai",
+        "url": "https://quickflick.ai/"
+      }
+    ]
   },
   {
     "title": "Boginn Archery Website",
@@ -22,7 +28,7 @@
       "/project_images/boginn4.avif",
       "/project_images/boginn5.avif"
     ],
-    "description": "I worked on a new website for the Boginn Archery club which is the largest archery club in Iceland, and one of the biggest ones in the nordic countries.\n\nThe goal of this project was to get the website running for the lowest cost possible but still being able to have the features and a good design so people would be able to find information they needed quickly.\n\nThe older system was running on Wordpress so what was required here was to select the right tools so that the staff of the archery club could create and add content to the site, but we still wanted the creative control of the design. That's why Astro was selected as the front-end framework and utilizing an open source authentication platform called DecapBridge, we were able to give access to the staff to add and edit content on the page with ease.\n",
+    "description": "I designed and developed a new website for Boginn Archery, the largest archery club in Iceland and one of the biggest in the Nordic region.\n\nThe main goal was to build a modern website with a strong visual identity, fast performance, and clear navigation, while keeping operational costs as low as possible. The site needed to allow visitors to easily find schedules, membership information, and upcoming events.\n\nThe previous website ran on WordPress, which limited both performance and design freedom. To meet the club’s needs, I selected tools that balanced flexibility with ease of use for non-technical staff. The website was built in Astro, giving full creative control over layout, design, and frontend structure.\n\nThe structure and page layout were planned to reduce information overload and make frequently accessed content accessible within one or two clicks. The goal was to make the interface feel simple, predictable, and supportive for both new visitors and long-term club members.\n\nTo enable staff to update content independently, I integrated DecapBridge (an open-source authentication and content management workflow), which allows secure login and simple content editing without touching code. This setup gives the club long-term scalability while keeping running costs close to zero.\n\nThe new website is now used daily by members, coaches, and parents. It has improved the accessibility of information and reduced the number of direct support questions received by the club, while giving staff far more control over their online presence.",
     "technologies": [
       "Astro",
       "DecapBridge",
@@ -32,7 +38,13 @@
       "Migadu (Email Hosting)"
     ],
     "roles": ["Full Stack", "UI/UX Design"],
-    "aspectRatio": "tall"
+    "aspectRatio": "tall",
+    "links": [
+      {
+        "title": "boginn.is",
+        "url": "https://boginn.is/"
+      }
+    ]
   },
   {
     "title": "Vörn App",
@@ -43,10 +55,16 @@
       "/project_images/vorn7.png",
       "/project_images/vorn1.avif"
     ],
-    "description": "Vörn was a final project for the bachelor in Reykjavík University, we were 3 working on this app for the department of fire safety in Iceland. The app is used to conduct inspections on buildings to make sure they follow the safety standards.\n\nThere was already an app developed inhouse by the development team around 12 years ago that is still used today, so our goal was to take as much inspiration from that app, do user surveys and testings to see what the current app does well and where it falls short or can be improved. The first images are from the prototype we developed after the user testing and descriped mainly the flow and more modern setup.\n\nMy main role was the bridge between design and development, I was the most involved in coming up with the new flow for the app, and the main layout, was I then also in charge of setting up the codebase which was in .NET MAUI, so a relatively new native framework, so that my teammates were able to focus on the final design or finilizing the backend connections and user management.",
+    "description": "Vörn was my bachelor’s capstone project at Reykjavík University, developed in collaboration with the Department of Fire Safety in Iceland. Our team of three redesigned their building inspection application, which is used to assess and document whether buildings meet fire safety standards.\n\nAn in-house application had already been in use for more than a decade, and while it was functionally reliable, it had clear usability and structural limitations. Our goal was to analyse the existing app, understand how inspectors used it in real operational environments, and redesign the experience to improve efficiency, clarity, and navigation.\n\nWe carried out user surveys, workflow mapping, and usability testing to identify what the current system did well and where it fell short. From this research, we produced a new prototype and interaction flow that followed modern mobile practices and reduced unnecessary steps. The images shown first are from the prototype, outlining the improved structure and updated visual direction.\n\nA key design requirement was reducing the possibility of user error. Fire inspections often happen in distracting environments, where inspectors are moving between rooms, speaking with personnel, and handling equipment. The app therefore needed to be fast to operate with minimal cognitive load, helping inspectors stay focused on safety rather than interface management.\n\nMy main role on the team was bridging design and development. I led the development of the new interaction flow and layout structure, working closely with feedback from inspectors and stakeholders. I also set up and structured the codebase in .NET MAUI, a relatively new native framework, allowing the other team members to focus on visual refinements, backend integration, and user management.",
     "technologies": [".NET MAUI", "Azure DevOps"],
     "roles": ["Native Development", "Prototype Design", "UX Design"],
-    "aspectRatio": ""
+    "aspectRatio": "",
+    "links": [
+      {
+        "title": "Thesis Webpage",
+        "url": "https://hdl.handle.net/1946/50442"
+      }
+    ]
   },
   {
     "title": "Hvar er Best að vera?",
@@ -56,10 +74,16 @@
       "/project_images/hvarerbest1.png",
       "/project_images/hvarerbest3.png"
     ],
-    "description": "What we most talk about here in Iceland is the weather. It is often a fun sport during the summer to follow the good weather around, it can vary a lot between places. So the goal of this project was to show you where in Iceland the weather would be the best, or like the title translates from Icelandic 'Where is best to be?'\n\nThe website uses the open api from the Icelandic Met Office, which gives predictions in weather from around 200 stations in Iceland. It takes those predictions and runs it through a ranking system, which you can also adjust on the website it self, if you would rather have more temperture and less wind, or wise versa. Then based on that it gives you the top place and points at it, and also honarable mentions, or the 2nd and 3rd place.\n\nThat was the basic functioality of the website, later I also mapped camping sites, golf courses and swimming pools (the most popular outdoor activies) nearest to the weather station that is in the top place, so that people can view them straight away, if they want to plan a trip there.\n\nThe tech stack for this project I wanted to keep simple, using mapbox with a custom Iceland overlay on top, and then hosting done with Firebase from Google, and hosting the database which I use to store the weather information from the API so I'm not calling it on each load, it instead updates once a day and stores the prediction in my database.",
+    "description": "In Iceland, weather changes quickly from region to region, and people often try to “chase” the best conditions during summer. The goal of this project was to visualise exactly where in the country the weather would be most enjoyable at any given time. The name of the project translates to “Where Is Best To Be?”\n\nThe website connects to the public Icelandic Meteorological Office API, collecting forecast data from around 200 weather stations across the country. These forecasts are processed through a custom scoring system that ranks the locations based on user-selected weather preferences. For example, visitors can prioritise temperature over wind, or adjust other factors to create their own ranking model.\n\nThe system then displays the top-ranked location—highlighting it directly on the map—and also presents the second and third best locations as alternative options. The experience is designed to give a quick, visual answer to the question: “Where should I go today?”\n\nAfter the core functionality was complete, I expanded the project by mapping camping sites, golf courses, and swimming pools near the top-ranked stations. These are some of the most popular outdoor activities in Iceland, and the feature allows users to immediately see what they can do if they decide to travel to that location.\n\nFrom a technical perspective, the project was built to remain efficient and inexpensive to run. A custom Iceland overlay was designed using Mapbox, and the platform is hosted on Firebase. Weather data is stored locally in a managed database and refreshed once per day, rather than requesting live data on each page load, which improves performance and reduces unnecessary API usage.",
     "technologies": ["React", "Firebase", "Render (DB)"],
     "roles": ["Full-Stack Dev", "UI/UX Design"],
-    "aspectRatio": ""
+    "aspectRatio": "",
+    "links": [
+      {
+        "title": "hvarerbestadvera.is",
+        "url": "https://hvarerbestadvera.is/"
+      }
+    ]
   },
   {
     "title": "Archery Broadcast Graphics Engine",
@@ -71,9 +95,15 @@
       "/project_images/archeryscoring3.png",
       "/project_images/archeryscoring4.png"
     ],
-    "description": "For around 6 years I've been in charge of running the live stream for our national archery competitions, which are about 4 main competitions per year. We first got our graphic package straight from the world archery federation, so we could use their professional graphics in our streams. Problem with that setup it required a windows computer, or a tower to be able to run the graphics and stream at the same time. My goal was to provide new and improved graphics and also make it more accessable to run the graphics engine on the streaming computer, and provide a more easy to use interface to control the graphics.\n\nThis software is created with Electron which runs chromium in the background so it is easy to run on any computer, on top of that the graphics rendering is just done with React, or just normal Web UI, so extremely lightweight to run on a streaming computer and easy to connect to our streaming software (OBS) just as a browser source. Screen real estate was also important to me, because sometimes I'm just running the stream on a 13 inch laptop, so being able to have the graphics control interface take little space was important.\n\nI designed also the graphics it self, which is inspired by the current graphics World Archery uses for their TV Broadcasts, being very minimal to start with, later I want to add more color to it, but this was a good foundation.",
+    "description": "For the past six years, I have been responsible for running the live streams for Iceland’s national archery competitions, which take place four times per year. The original graphic package we used came from the World Archery Federation, allowing us to broadcast with professional visual standards. However, that setup required a big desktop tower (and had to be on Windows) to run both the graphics system and the stream simultaneously, which made the workflow restrictive and difficult to move between venues.\n\nMy goal was to modernise this system by designing new competition graphics and creating a lightweight, cross-platform engine to run them directly on the streaming computer. The software is built with Electron, using Chromium for rendering, and the graphics themselves are written in React—essentially standard web UI components. This approach makes the system extremely efficient and easy to run on almost any machine, while integrating seamlessly with OBS through a simple browser source.\n\nI also focused heavily on usability. Live production often happens under pressure, and competitions are sometimes streamed from a 13-inch laptop. Because of this, interface layout and screen real estate were a priority. I designed a compact control panel that keeps essential controls visible at all times without blocking the production workspace.\n\nIn addition to developing the software, I designed the broadcast graphics package. The visual direction was inspired by the World Archery federation’s TV broadcasts—clean and minimal to begin with, with plans to expand the design language and colour use in future iterations.\n\nOverall, this project allowed me to combine interface design, engineering, and live production experience to solve a real operational challenge and make streaming setup significantly easier and more flexible.",
     "technologies": ["Electron", "React"],
     "roles": ["Graphic Design", "Full-Stack Dev"],
-    "aspectRatio": ""
+    "aspectRatio": "",
+    "links": [
+      {
+        "title": "Archery TV Iceland Youtube",
+        "url": "https://www.youtube.com/@ArcheryTVIceland"
+      }
+    ]
   }
 ]
