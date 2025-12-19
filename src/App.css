@@ -9,12 +9,6 @@
   gap: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 section {
   /* margin-bottom: 4rem; */
 }
@@ -28,4 +22,21 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 2rem;
+
+    #about-image {
+      height: 200px;
+      width: 200px;
+    }
+  }
 }

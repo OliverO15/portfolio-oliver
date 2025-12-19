@@ -64,7 +64,7 @@ const ProjectDetailsOverlay = (props: any) => {
           <div className="column description-tools">
             <p style={{ whiteSpace: "pre-wrap" }}>{project.description}</p>
             <h3>Technologies Used:</h3>
-            <div className="row warp">
+            <div className="row warp tools-list">
               {project.technologies.map((technology, index) => (
                 <div className="row">
                   <span key={index}>{technology}</span>

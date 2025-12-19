@@ -27,25 +27,19 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="about">
-        <div className="row g-30">
-          <img
-            id="about-image"
-            src="/oliver_portrait.avif"
-            alt="Picture of me"
-          />
-          <div className="column" style={{ textAlign: "left" }}>
-            <h3>About Me</h3>
-            <p>
-              I’m a designer and developer from Iceland with a background in
-              visual design and computer science. I focus on UI/UX and
-              interactive system design, and I enjoy building digital products
-              where usability, structure, and technology come together. I
-              recently graduated with a B.Sc. in Computer Science and have
-              professional experience designing and developing user interfaces
-              for real products and real users.
-            </p>
-          </div>
+      <section id="about" className="row g-30">
+        <img id="about-image" src="/oliver_portrait.avif" alt="Picture of me" />
+        <div className="column" style={{ textAlign: "left" }}>
+          <h3>About Me</h3>
+          <p>
+            I’m a designer and developer from Iceland with a background in
+            visual design and computer science. I focus on UI/UX and interactive
+            system design, and I enjoy building digital products where
+            usability, structure, and technology come together. I recently
+            graduated with a B.Sc. in Computer Science and have professional
+            experience designing and developing user interfaces for real
+            products and real users.
+          </p>
         </div>
       </section>
       <section id="projects" className="column g-30">

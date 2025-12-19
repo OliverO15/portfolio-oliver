@@ -87,11 +87,28 @@
     h3 {
       margin-top: 0;
     }
+  }
+}
 
+@media (max-width: 768px) {
+  .project-details-content {
+    h1 {
+      padding: 0 60px;
+    }
+
+    .project-images {
+      height: 350px;
+    }
+  }
+
+  .description-tools {
     .tools-list {
-      display: flex;
+      flex-direction: column;
       gap: 10px;
-      flex-wrap: wrap;
+
+      .role-tag {
+        display: none;
+      }
     }
   }
 }
