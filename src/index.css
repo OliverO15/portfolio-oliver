@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lexend", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -35,6 +36,17 @@ h1 {
   line-height: 1.1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -52,6 +64,49 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+
+  &.g-0 {
+    gap: 0;
+  }
+
+  &.g-5 {
+    gap: 5px;
+  }
+
+  &.g-15 {
+    gap: 15px;
+  }
+
+  &.g-30 {
+    gap: 30px;
+  }
+
+  &.warp {
+    flex-wrap: wrap;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &.g-5 {
+    gap: 5px;
+  }
+
+  &.g-15 {
+    gap: 15px;
+  }
+
+  &.g-30 {
+    gap: 30px;
+  }
 }
 
 @media (prefers-color-scheme: light) {

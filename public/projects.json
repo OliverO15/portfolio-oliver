@@ -1,0 +1,79 @@
+[
+  {
+    "title": "QuickFlick.ai",
+    "featuredImage": "/project_images/quickflick1.png",
+    "images": [
+      "/project_images/quickflick1.png",
+      "/project_images/quickflick4.png",
+      "/project_images/quickflick2.png",
+      "/project_images/quickflick3.png"
+    ],
+    "description": "Quickflick is an AI video creation and editing platform built to make video creation easy and accessable for everyone. My main role for this project which I worked on for 2 years was front-end development, UI and UX design working closely with the product owner and CEO of the company.\n\nWe challenged us every day to come up with different ways to make video creation easier, and our motto was always 'Can my grandma do this?', we utilized AI on the platform to make ...",
+    "technologies": ["Vanilla Javascript", "PHP", "CSS", "HTML"],
+    "roles": ["Front-End Dev", "UI/UX Design"],
+    "aspectRatio": "hero"
+  },
+  {
+    "title": "Boginn Archery Website",
+    "featuredImage": "/project_images/boginn1.avif",
+    "images": [
+      "/project_images/boginn2.avif",
+      "/project_images/boginn3.avif",
+      "/project_images/boginn4.avif",
+      "/project_images/boginn5.avif"
+    ],
+    "description": "I worked on a new website for the Boginn Archery club which is the largest archery club in Iceland, and one of the biggest ones in the nordic countries.\n\nThe goal of this project was to get the website running for the lowest cost possible but still being able to have the features and a good design so people would be able to find information they needed quickly.\n\nThe older system was running on Wordpress so what was required here was to select the right tools so that the staff of the archery club could create and add content to the site, but we still wanted the creative control of the design. That's why Astro was selected as the front-end framework and utilizing an open source authentication platform called DecapBridge, we were able to give access to the staff to add and edit content on the page with ease.\n",
+    "technologies": [
+      "Astro",
+      "DecapBridge",
+      "Netlify (Hosting)",
+      "Uploadcare (Asset Management)",
+      "Umami (Analytics)",
+      "Migadu (Email Hosting)"
+    ],
+    "roles": ["Full Stack", "UI/UX Design"],
+    "aspectRatio": "tall"
+  },
+  {
+    "title": "Vörn App",
+    "featuredImage": "/project_images/vorn1.avif",
+    "images": [
+      "/project_images/vorn5.png",
+      "/project_images/vorn6.png",
+      "/project_images/vorn7.png",
+      "/project_images/vorn1.avif"
+    ],
+    "description": "Vörn was a final project for the bachelor in Reykjavík University, we were 3 working on this app for the department of fire safety in Iceland. The app is used to conduct inspections on buildings to make sure they follow the safety standards.\n\nThere was already an app developed inhouse by the development team around 12 years ago that is still used today, so our goal was to take as much inspiration from that app, do user surveys and testings to see what the current app does well and where it falls short or can be improved. The first images are from the prototype we developed after the user testing and descriped mainly the flow and more modern setup.\n\nMy main role was the bridge between design and development, I was the most involved in coming up with the new flow for the app, and the main layout, was I then also in charge of setting up the codebase which was in .NET MAUI, so a relatively new native framework, so that my teammates were able to focus on the final design or finilizing the backend connections and user management.",
+    "technologies": [".NET MAUI", "Azure DevOps"],
+    "roles": ["Native Development", "Prototype Design", "UX Design"],
+    "aspectRatio": ""
+  },
+  {
+    "title": "Hvar er Best að vera?",
+    "featuredImage": "/project_images/hvarerbest1.png",
+    "images": [
+      "/project_images/hvarerbest2.png",
+      "/project_images/hvarerbest1.png",
+      "/project_images/hvarerbest3.png"
+    ],
+    "description": "What we most talk about here in Iceland is the weather. It is often a fun sport during the summer to follow the good weather around, it can vary a lot between places. So the goal of this project was to show you where in Iceland the weather would be the best, or like the title translates from Icelandic 'Where is best to be?'\n\nThe website uses the open api from the Icelandic Met Office, which gives predictions in weather from around 200 stations in Iceland. It takes those predictions and runs it through a ranking system, which you can also adjust on the website it self, if you would rather have more temperture and less wind, or wise versa. Then based on that it gives you the top place and points at it, and also honarable mentions, or the 2nd and 3rd place.\n\nThat was the basic functioality of the website, later I also mapped camping sites, golf courses and swimming pools (the most popular outdoor activies) nearest to the weather station that is in the top place, so that people can view them straight away, if they want to plan a trip there.\n\nThe tech stack for this project I wanted to keep simple, using mapbox with a custom Iceland overlay on top, and then hosting done with Firebase from Google, and hosting the database which I use to store the weather information from the API so I'm not calling it on each load, it instead updates once a day and stores the prediction in my database.",
+    "technologies": ["React", "Firebase", "Render (DB)"],
+    "roles": ["Full-Stack Dev", "UI/UX Design"],
+    "aspectRatio": ""
+  },
+  {
+    "title": "Archery Broadcast Graphics Engine",
+    "featuredImage": "/project_images/archeryscoring2.png",
+    "images": [
+      "/project_images/archeryscoring1.png",
+      "/project_images/archeryscoring5.png",
+      "/project_images/archeryscoring2.png",
+      "/project_images/archeryscoring3.png",
+      "/project_images/archeryscoring4.png"
+    ],
+    "description": "For around 6 years I've been in charge of running the live stream for our national archery competitions, which are about 4 main competitions per year. We first got our graphic package straight from the world archery federation, so we could use their professional graphics in our streams. Problem with that setup it required a windows computer, or a tower to be able to run the graphics and stream at the same time. My goal was to provide new and improved graphics and also make it more accessable to run the graphics engine on the streaming computer, and provide a more easy to use interface to control the graphics.\n\nThis software is created with Electron which runs chromium in the background so it is easy to run on any computer, on top of that the graphics rendering is just done with React, or just normal Web UI, so extremely lightweight to run on a streaming computer and easy to connect to our streaming software (OBS) just as a browser source. Screen real estate was also important to me, because sometimes I'm just running the stream on a 13 inch laptop, so being able to have the graphics control interface take little space was important.\n\nI designed also the graphics it self, which is inspired by the current graphics World Archery uses for their TV Broadcasts, being very minimal to start with, later I want to add more color to it, but this was a good foundation.",
+    "technologies": ["Electron", "React"],
+    "roles": ["Graphic Design", "Full-Stack Dev"],
+    "aspectRatio": ""
+  }
+]
