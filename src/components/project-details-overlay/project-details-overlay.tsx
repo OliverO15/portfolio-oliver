@@ -51,7 +51,7 @@ const ProjectDetailsOverlay = (props: any) => {
             onClick={props.onClose}
           />
           <div className="project-images">
-            <div className="row g-0" style={{ height: "100%" }}>
+            <div className="row" style={{ height: "100%", padding: "0 10px" }}>
               {project.images.map((image, index) => (
                 <img
                   key={index}
