@@ -1,6 +1,6 @@
 import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./components/navbar/navbar";
 import ProjectCard from "./components/project-card/project-card";
 import projectsData from "../public/projects.json";
