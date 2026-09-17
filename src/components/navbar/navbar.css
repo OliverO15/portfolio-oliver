@@ -6,13 +6,19 @@ nav {
   width: 100%;
 }
 
-a {
+/* The signature logo is a white PNG on transparency, so it is inverted
+   to near-black to stay visible on the light background. */
+nav img {
+  filter: invert(1);
+}
+
+nav a {
   text-decoration: none;
-  color: white;
+  color: var(--text);
   padding: 5px 25px;
   transition: all 0.1s ease-in-out;
 
   &:hover {
-    color: rgb(203, 203, 203);
+    color: var(--text-muted);
   }
 }

@@ -1,4 +1,6 @@
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./components/navbar/navbar";
 import ProjectCard from "./components/project-card/project-card";
 import projectsData from "../public/projects.json";
@@ -40,6 +42,17 @@ function App() {
             experience designing and developing user interfaces for real
             products and real users.
           </p>
+          {/* <div className="row">
+            <a
+              href="/oliver_portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-button outline"
+            >
+              <FontAwesomeIcon icon={faFilePdf} />
+              Portfolio (PDF)
+            </a>
+          </div> */}
         </div>
       </section>
       <section id="projects" className="column g-30">
