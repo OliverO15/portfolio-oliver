@@ -303,14 +303,12 @@ export default class Multiview extends Component {
                   )}
                   <ProgramShots v={v} />
                 </div>
-                {v.isProject && (
-                  <div className="cgline mono" aria-label="Credits">
-                    <span className="cgtag">CG</span>
-                    {v.credits.map((c) => (
-                      <span className="cgitem" key={c.k}>{c.v}</span>
-                    ))}
-                  </div>
-                )}
+                <div className="cgline mono" aria-label="Credits">
+                  <span className="cgtag">CG</span>
+                  {v.credits.map((c) => (
+                    <span className="cgitem" key={c.k}>{c.v}</span>
+                  ))}
+                </div>
                 <ShotBar v={v} />
               </div>
             </div>
