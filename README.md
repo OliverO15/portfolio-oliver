@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Oliver Ormar Ingvarsson — portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A one-page portfolio built as a broadcast multiview: four projects as camera sources, a program window that plays each project as a four-shot segment, and a working studio switcher (input keys, AUTO, CUT).
 
-Currently, two official plugins are available:
+Live: https://oliver-ormar-portfolio.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+- [Astro](https://astro.build) for the static page, meta tags and assets
+- React for the interactive multiview (one island, `client:load`)
+- Hosted on Netlify (`netlify.toml`)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Structure
+```
+src/
+  components/Multiview.jsx   switcher, program window, shots, auto-play
+  data/projects.js           project titles, credits and thumbnails
+  styles/multiview.css       all styles, incl. the mobile layout (≤760px)
+  layouts/Base.astro         <head>: title, description, Open Graph
+  pages/index.astro
+public/
+  assets/                    images and short muted videos used by the shots
+  Oliver_Ormar_Ingvarsson_CV.pdf
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Develop
 ```
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # outputs to dist/
+```
+
+## Behaviour notes
+- Auto-play starts a few seconds after load and loops Vörn → QuickFlick → Graphics Engine → Bogfimisetrið. The next project is always loaded into preview before the cut.
+- Any click, tap or key press hands control to the visitor; the AUTO key resumes.
+- Auto-play is off for visitors with reduced motion enabled and pauses while the tab is hidden.
