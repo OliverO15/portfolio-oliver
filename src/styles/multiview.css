@@ -204,7 +204,7 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
    window as a CG line, the contact box slims down, and only the switcher's
    top strip peeks until hover */
 .cgline{display:none}
-@media (max-height:900px) and (min-width:761px){
+@media (max-height:1050px) and (min-width:761px){
 .crblock{display:none !important}
 .glow-r{container-type:inline-size}
 .cgline{display:flex;align-items:center;gap:.9em;padding:7px 14px;background:#101113;border-top:1px solid #23262B;font-family:'Barlow',sans-serif;font-size:min(13.5px, calc((100cqw - 40px) / 54));color:#E8E6E1;white-space:nowrap;overflow:hidden}
@@ -219,13 +219,13 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .slatepad p{font-size:17px !important}
 .slatepad p + p{font-size:14px !important}
 }
-@media (max-height:900px) and (min-width:761px) and (max-width:1200px){
+@media (max-height:1050px) and (min-width:761px) and (max-width:1200px){
 .slatepad{padding:20px 28px !important;gap:8px !important}
 .slatepad h1{font-size:32px !important}
 .slatepad p{font-size:14px !important}
 .slatepad p + p{display:none}
 }
-@media (max-height:900px) and (min-width:761px) and (hover:hover){
+@media (max-height:1050px) and (min-width:761px) and (hover:hover){
 .dock{transform:translateY(214px)}
 .dock:hover,.dock:has(:focus-visible),.dock.intro{transform:translateY(0)}
 }
