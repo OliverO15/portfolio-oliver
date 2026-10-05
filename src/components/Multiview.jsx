@@ -20,7 +20,7 @@ import ContactStrip from './ContactStrip.jsx';
 import Switcher from './Switcher.jsx';
 
 export default class Multiview extends Component {
-  static defaultProps = {"accent": "#F2A93B", "transition": "wipe", "glow": 40, "texture": 40, "brightness": 25, "depth": 100, "size": 300, "light": 32, "warmth": 70, "lampX": 52, "lampY": 24, "spread": 70, "stretch": 170, "angle": -21, "softness": 75, "rake": 40, "vignette": 40, "l2on": true, "l2light": 28, "l2warmth": 55, "l2x": 97, "l2y": 74, "l2spread": 65, "l2stretch": 170, "l2angle": -29, "l2soft": 85, "l2rake": 40, "l3on": true, "l3light": 30, "l3warmth": 75, "l3x": 10, "l3y": 95, "l3spread": 70, "l3stretch": 170, "l3angle": -39, "l3soft": 80, "l3rake": 50};
+  static defaultProps = {"accent": "#F2A93B", "transition": "wipe", "glow": 40, "texture": 40, "brightness": 25, "depth": 100, "size": 300, "light": 28, "warmth": 70, "lampX": 52, "lampY": 24, "spread": 70, "stretch": 170, "angle": -21, "softness": 75, "rake": 40, "vignette": 40, "l2on": true, "l2light": 25, "l2warmth": 55, "l2x": 97, "l2y": 74, "l2spread": 65, "l2stretch": 170, "l2angle": -29, "l2soft": 85, "l2rake": 40, "l3on": true, "l3light": 27, "l3warmth": 75, "l3x": 10, "l3y": 95, "l3spread": 70, "l3stretch": 170, "l3angle": -39, "l3soft": 80, "l3rake": 50};
 
   constructor(props) {
     super(props);

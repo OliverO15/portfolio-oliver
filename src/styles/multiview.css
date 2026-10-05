@@ -281,6 +281,6 @@ header .mono > span:last-child{display:none}
 }
 
 /* outgoing shot held underneath during a transition: frozen at its end state */
-.under{position:absolute;inset:0;pointer-events:none}
+.under{position:absolute;inset:0;z-index:0;isolation:isolate;pointer-events:none}
 .under *{animation:none !important;transition:none !important}
 .under .vcutout{display:none}
