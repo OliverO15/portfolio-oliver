@@ -167,7 +167,6 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .dock{transform:translateY(110px);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .dock:hover,.dock:focus-within,.dock.intro{transform:translateY(0)}
 .pagepad{padding-bottom:180px}
-@media (min-height:1000px){.dock{transform:none}.pagepad{padding-bottom:300px}}
 @media (hover:none){.dock{transform:none}.pagepad{padding-bottom:300px}}
 .k{width:108px;height:82px;border-radius:9px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:28px;color:#C9CDD2;background:linear-gradient(180deg,#3B3F45 0%,#2A2D32 100%);box-shadow:0 4px 0 #0A0B0C,0 7px 14px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.16),inset 0 -10px 16px rgba(0,0,0,.25);transition:transform .06s ease,box-shadow .06s ease}
 .k:hover{color:#FFFFFF}
@@ -197,8 +196,7 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 
 /* fit the multiview to the window height on desktop: the program window
    (16:9 + shot bar) must sit above the switcher without scrolling */
-.pagepad{--dockh:154px;--fitw:calc((100vh - 232px - var(--dockh)) * 1.7778 * 1.55 + 24px)}
-@media (min-height:1000px){.pagepad{--dockh:264px}}
+.pagepad{--dockh:154px;--fitw:min(1560px, calc((100vh - 232px - var(--dockh)) * 1.7778 * 1.55 + 24px))}
 @media (max-height:760px){.pagepad{--dockh:125px}}
 @media (max-height:760px) and (min-width:1041px){.dock{zoom:.8}}
 .pagepad > header,.mv{width:100%;max-width:max(640px,var(--fitw));margin-inline:auto;box-sizing:border-box}
