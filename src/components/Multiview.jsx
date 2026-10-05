@@ -20,7 +20,7 @@ import ContactStrip from './ContactStrip.jsx';
 import Switcher from './Switcher.jsx';
 
 export default class Multiview extends Component {
-  static defaultProps = {"accent": "#F2A93B", "transition": "wipe", "glow": 40, "texture": 40, "brightness": 25, "depth": 100, "size": 300, "light": 45, "warmth": 70, "lampX": 52, "lampY": 24, "spread": 70, "stretch": 170, "angle": -21, "softness": 75, "rake": 50, "vignette": 40, "l2on": true, "l2light": 40, "l2warmth": 55, "l2x": 97, "l2y": 74, "l2spread": 65, "l2stretch": 170, "l2angle": -29, "l2soft": 85, "l2rake": 40, "l3on": true, "l3light": 45, "l3warmth": 75, "l3x": 10, "l3y": 95, "l3spread": 70, "l3stretch": 170, "l3angle": -39, "l3soft": 80, "l3rake": 65};
+  static defaultProps = {"accent": "#F2A93B", "transition": "wipe", "glow": 40, "texture": 40, "brightness": 25, "depth": 100, "size": 300, "light": 32, "warmth": 70, "lampX": 52, "lampY": 24, "spread": 70, "stretch": 170, "angle": -21, "softness": 75, "rake": 40, "vignette": 40, "l2on": true, "l2light": 28, "l2warmth": 55, "l2x": 97, "l2y": 74, "l2spread": 65, "l2stretch": 170, "l2angle": -29, "l2soft": 85, "l2rake": 40, "l3on": true, "l3light": 30, "l3warmth": 75, "l3x": 10, "l3y": 95, "l3spread": 70, "l3stretch": 170, "l3angle": -39, "l3soft": 80, "l3rake": 50};
 
   constructor(props) {
     super(props);
@@ -29,13 +29,6 @@ export default class Multiview extends Component {
     this.projects = projects;
     this.shotLabels = ['OPEN', 'PROBLEM', 'TRY IT', 'RESULT'];
     this.labelsFor = { vorn: ['OPEN', 'BEFORE', 'PROCESS', 'FINAL'], qf: ['OPEN', 'WORKFLOW', 'PRODUCT', 'MARKETING'], gfx: ['OPEN', 'TRY IT', 'INTERFACE', 'RESULTS'], bog: ['OPEN', 'BEFORE', 'MODULES', 'ADS'] };
-  }
-  componentDidUpdate(prevProps, prevState) {
-    // Keep the outgoing shot visible underneath while the next one wipes in.
-    const st = this.state;
-    if (prevState.pgm !== st.pgm || prevState.shot !== st.shot) {
-      this.under = { pgm: prevState.pgm, shot: prevState.shot, until: Date.now() + 800 };
-    }
   }
   componentDidMount() {
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
@@ -272,6 +265,13 @@ export default class Multiview extends Component {
   }
 
   render() {
+    // Keep the outgoing shot visible underneath while the next one wipes in.
+    // Decided during render so the very first frame of a new shot already has it.
+    const st = this.state;
+    if (this.shown && (this.shown.pgm !== st.pgm || this.shown.shot !== st.shot)) {
+      this.under = { pgm: this.shown.pgm, shot: this.shown.shot, until: Date.now() + 800 };
+    }
+    this.shown = { pgm: st.pgm, shot: st.shot };
     const v = this.renderVals();
     const u = this.under;
     const under = u && Date.now() < u.until ? this.renderVals({ ...this.state, pgm: u.pgm, shot: u.shot }, true) : null;

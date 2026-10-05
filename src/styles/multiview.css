@@ -206,10 +206,11 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .cgline{display:none}
 @media (max-height:900px) and (min-width:761px){
 .crblock{display:none !important}
-.cgline{display:flex;align-items:center;gap:14px;padding:7px 14px;background:#101113;border-top:1px solid #23262B;font-size:12px;color:#E8E6E1;white-space:nowrap;overflow:hidden}
-.cgline .cgtag{padding:2px 6px;border:1px solid #3A3E45;border-radius:3px;color:#A3A8AE;font-size:10px;letter-spacing:.1em}
-.cgline .cgitem{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
-.cgline .cgitem + .cgitem::before{content:"·";margin-right:14px;color:#6B6F75}
+.glow-r{container-type:inline-size}
+.cgline{display:flex;align-items:center;gap:.9em;padding:7px 14px;background:#101113;border-top:1px solid #23262B;font-family:'Barlow',sans-serif;font-size:min(13.5px, calc((100cqw - 40px) / 54));color:#E8E6E1;white-space:nowrap;overflow:hidden}
+.cgline .cgtag{flex:none;padding:2px 6px;border:1px solid #3A3E45;border-radius:3px;color:#A3A8AE;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em}
+.cgline .cgitem{flex:none}
+.cgline .cgitem + .cgitem::before{content:"·";margin-right:.9em;color:#6B6F75}
 .auxblock > div{padding:10px 16px !important;flex-wrap:nowrap !important}
 .auxblock > div > span{font-size:13px !important;max-width:none !important}
 .pagepad{padding-bottom:70px !important}
