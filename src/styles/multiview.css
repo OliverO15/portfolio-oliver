@@ -165,7 +165,7 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .rise-in{animation:risein .9s .2s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes risein{from{transform:translateY(100%)}to{transform:translateY(0)}}
 .dock{transform:translateY(110px);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.dock:hover,.dock:has(:focus-visible),.dock.intro{transform:translateY(0)}
+.dock:hover,.dock:focus-within,.dock.intro{transform:translateY(0)}
 .pagepad{padding-bottom:180px}
 @media (hover:none){.dock{transform:none}.pagepad{padding-bottom:300px}}
 .k{width:108px;height:82px;border-radius:9px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:28px;color:#C9CDD2;background:linear-gradient(180deg,#3B3F45 0%,#2A2D32 100%);box-shadow:0 4px 0 #0A0B0C,0 7px 14px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.16),inset 0 -10px 16px rgba(0,0,0,.25);transition:transform .06s ease,box-shadow .06s ease}
@@ -200,6 +200,16 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 @media (max-height:760px){.pagepad{--dockh:125px}}
 @media (max-height:760px) and (min-width:1041px){.dock{zoom:.8}}
 .pagepad > header,.mv{width:100%;max-width:max(640px,var(--fitw));margin-inline:auto;box-sizing:border-box}
+/* short screens: lower condensed switcher (OLED labels + key tops), capped preview */
+@media (max-height:900px) and (min-width:761px) and (hover:hover){
+.dock{transform:translateY(132px)}
+.pagepad{--dockh:140px}
+}
+@media (max-height:760px) and (min-width:761px){.pagepad{--dockh:118px}}
+@media (min-width:761px){
+.pagepad{--mvw:min(var(--fitw), calc(100vw - 48px));--colw:calc(var(--mvw) * .3548 - 8px);--pvcap:calc(100vh - var(--dockh) - 26px - 276px - var(--colw) * .5625)}
+.pvwmon .hatch{width:min(100%, max(200px, calc(var(--pvcap) * 1.7778)))}
+}
 /* mid widths: keep the switcher inside the window */
 @media (max-width:1150px) and (min-width:761px){.dock{zoom:.9}}
 @media (max-width:1040px) and (min-width:761px){.dock{zoom:.8}}
