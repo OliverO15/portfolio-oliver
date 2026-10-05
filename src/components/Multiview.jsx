@@ -30,6 +30,13 @@ export default class Multiview extends Component {
     this.shotLabels = ['OPEN', 'PROBLEM', 'TRY IT', 'RESULT'];
     this.labelsFor = { vorn: ['OPEN', 'BEFORE', 'PROCESS', 'FINAL'], qf: ['OPEN', 'WORKFLOW', 'PRODUCT', 'MARKETING'], gfx: ['OPEN', 'TRY IT', 'INTERFACE', 'RESULTS'], bog: ['OPEN', 'BEFORE', 'MODULES', 'ADS'] };
   }
+  componentDidUpdate(prevProps, prevState) {
+    // Keep the outgoing shot visible underneath while the next one wipes in.
+    const st = this.state;
+    if (prevState.pgm !== st.pgm || prevState.shot !== st.shot) {
+      this.under = { pgm: prevState.pgm, shot: prevState.shot, until: Date.now() + 800 };
+    }
+  }
   componentDidMount() {
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
     this.autoT = [];
@@ -89,8 +96,7 @@ export default class Multiview extends Component {
     clearTimeout(this.flashT);
     this.flashT = setTimeout(() => this.setState({ flash: false }), 160);
   }
-  renderVals() {
-    const st = this.state;
+  renderVals(st = this.state, isUnder = false) {
     const { pgm, pvw, shot } = st;
     const P = this.projects;
     const pr = this.props;
@@ -139,8 +145,8 @@ export default class Multiview extends Component {
     const vis = isProject && (cur.key === 'vorn' || cur.key === 'qf');
     const isV = isProject && cur.key === 'vorn', isQ = isProject && cur.key === 'qf', isG = isProject && cur.key === 'gfx', isB = isProject && cur.key === 'bog';
     const gRes = isG && shot === 3;
-    if (gRes && !this.gResStart) this.gResStart = Date.now();
-    if (!gRes) this.gResStart = 0;
+    if (!isUnder && gRes && !this.gResStart) this.gResStart = Date.now();
+    if (!isUnder && !gRes) this.gResStart = 0;
     const gT = gRes ? Math.min(1, Math.max(0, (Date.now() - this.gResStart - 300) / 1600)) : 1;
     const gViews = Math.round(1070263 * (1 - Math.pow(1 - gT, 3))).toLocaleString('en-US');
     const shots = labels.map((l, i) => ({
@@ -267,6 +273,8 @@ export default class Multiview extends Component {
 
   render() {
     const v = this.renderVals();
+    const u = this.under;
+    const under = u && Date.now() < u.until ? this.renderVals({ ...this.state, pgm: u.pgm, shot: u.shot }, true) : null;
     return (
       <div className="pagepad" style={{"--glow": `${v.glow}`, "--tex": `${v.tex}`, "--tsize": `${v.tsize}`, "--tcon": `${v.tcon}`, "--tbri": `${v.tbri}`, "--light": `${v.light}`, "--lamp": `${v.lamp}`, "--lx": `${v.lx}`, "--ly": `${v.ly}`, "--lw": `${v.lw}`, "--lr": `${v.lr}`, "--la": `${v.la}`, "--lhard": `${v.lhard}`, "--vig": `${v.vig}`, "--rake": `${v.rake}`, position: "relative", overflow: "hidden", minHeight: "100vh", boxSizing: "border-box", padding: "0 24px", fontFamily: "'Barlow', sans-serif", color: "#E8E6E1", background: "#121314", display: "flex", flexDirection: "column", gap: "24px"}}>
         <Surface v={v} />
@@ -288,11 +296,12 @@ export default class Multiview extends Component {
               </div>
               <div className="glow-r" style={{border: "2px solid #E5484D", borderRadius: "6px", overflow: "hidden", background: "#101113", display: "flex", flexDirection: "column"}}>
                 <div style={{position: "relative", aspectRatio: "16/9", overflow: "hidden"}}>
-                  <Slate v={v} />
-                  <BogfimiShots v={v} />
-                  <GraphicsShots v={v} />
-                  <QuickFlickShots v={v} />
-                  <VornShots v={v} />
+                  {under && (
+                    <div className="under" aria-hidden="true" inert="">
+                      <ProgramShots v={under} />
+                    </div>
+                  )}
+                  <ProgramShots v={v} />
                 </div>
                 <ShotBar v={v} />
               </div>
@@ -305,6 +314,19 @@ export default class Multiview extends Component {
       </div>
     );
   }
+}
+
+/** Everything that can be on air in the program window. */
+function ProgramShots({ v }) {
+  return (
+    <>
+      <Slate v={v} />
+      <BogfimiShots v={v} />
+      <GraphicsShots v={v} />
+      <QuickFlickShots v={v} />
+      <VornShots v={v} />
+    </>
+  );
 }
 
 Object.assign(Multiview.prototype, autoplayMethods);
