@@ -76,8 +76,8 @@ export const autoplayMethods = {
     this.setState({ shot: i });
     this.shotStart = Date.now();
     this.shotDur = dur;
-    if (key === 'qf' && i === 1) { this.setState({ split: 50 }); this.tween('split', 50, 12, 2600, 1200); this.tween('split', 12, 50, 1800, 5600); }
-    if (key === 'bog' && i === 1) { this.setState({ bSplit: 50 }); this.tween('bSplit', 50, 10, 2600, 1200); this.tween('bSplit', 10, 50, 1800, 5600); }
+    if (key === 'qf' && i === 1) { this.setState({ split: 80 }); this.tween('split', 80, 8, 3000, 1400); this.tween('split', 8, 50, 1800, 6200); }
+    if (key === 'bog' && i === 1) { this.setState({ bSplit: 80 }); this.tween('bSplit', 80, 8, 3000, 1400); this.tween('bSplit', 8, 50, 1800, 6200); }
     if (key === 'gfx' && i === 1) {
       this.setState({ gEnd: 0, gSc: false, gPres: false, gQual: false, gMode: 'condensed' });
       const steps = [

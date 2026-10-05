@@ -24,7 +24,7 @@ export default class Multiview extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { pgm: 'slate', pvw: 0, shot: 0, tc: '00:00:00:00', split: 50, bSplit: 50, vornNew: true, bogNew: true, gEnd: 0, gSc: false, gMode: 'condensed', gPres: false, gQual: false, flash: false, intro: true, auto: false, l: 9, r: 8, pl: 11, pr: 10 };
+    this.state = { pgm: 'slate', pvw: 0, shot: 0, tc: '00:00:00:00', split: 80, bSplit: 80, vornNew: true, bogNew: true, gEnd: 0, gSc: false, gMode: 'condensed', gPres: false, gQual: false, flash: false, intro: true, auto: false, l: 9, r: 8, pl: 11, pr: 10 };
     this.lv = 0.55; this.rv = 0.5; this.tick = 0;
     this.projects = projects;
     this.shotLabels = ['OPEN', 'PROBLEM', 'TRY IT', 'RESULT'];
