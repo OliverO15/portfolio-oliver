@@ -249,7 +249,6 @@ header .cond{font-size:18px !important}
 .pgmblock nav > span{display:none}
 .pgmblock .sbtn{padding:0 10px;flex:1;justify-content:center}
 .pgmblock .sbtn.arrow{flex:0 0 40px}
-header .mono > span:last-child{display:none}
 .sources{order:2;display:flex !important;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;margin:0 -16px;padding:4px 16px 6px;scrollbar-width:none}
 .sources::-webkit-scrollbar{display:none}
 .sources > div{flex:0 0 44%;scroll-snap-align:start}

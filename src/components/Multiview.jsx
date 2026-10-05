@@ -24,7 +24,7 @@ export default class Multiview extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { pgm: 'slate', pvw: 0, shot: 0, tc: '00:00:00:00', split: 80, bSplit: 80, vornNew: true, bogNew: true, gEnd: 0, gSc: false, gMode: 'condensed', gPres: false, gQual: false, flash: false, intro: true, auto: false, l: 9, r: 8, pl: 11, pr: 10 };
+    this.state = { pgm: 'slate', pvw: 0, shot: 0, tc: '--:--:--:--', split: 80, bSplit: 80, vornNew: true, bogNew: true, gEnd: 0, gSc: false, gMode: 'condensed', gPres: false, gQual: false, flash: false, intro: true, auto: false, l: 9, r: 8, pl: 11, pr: 10 };
     this.lv = 0.55; this.rv = 0.5; this.tick = 0;
     this.projects = projects;
     this.shotLabels = ['OPEN', 'PROBLEM', 'TRY IT', 'RESULT'];
@@ -61,13 +61,12 @@ export default class Multiview extends Component {
     }
     const reduceAuto = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduceAuto) { this.autoPending = true; this.autoT.push(setTimeout(() => { this.autoPending = false; this.startAuto(); }, 7400)); }
-    const start = Date.now();
+    // Time-of-day timecode (HH:MM:SS:FF at 25 fps), like a station clock.
     this.timer = setInterval(() => {
-      const ms = Date.now() - start;
-      const f = Math.floor((ms % 1000) / 40);
-      const s = Math.floor(ms / 1000);
+      const d = new Date();
       const p = (n) => String(n).padStart(2, '0');
-      this.setState({ tc: p(Math.floor(s / 3600)) + ':' + p(Math.floor(s / 60) % 60) + ':' + p(s % 60) + ':' + p(f) });
+      const f = Math.floor(d.getMilliseconds() / 40);
+      this.setState({ tc: p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds()) + ':' + p(f) });
     }, 40);
     const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduce) {
@@ -302,9 +301,6 @@ export default class Multiview extends Component {
               <div className="mono" style={{display: "flex", justifyContent: "space-between", fontSize: "13px"}}>
                 <span style={{color: "#FF9A9D", opacity: ".85"}}>
                   PROGRAM
-                </span>
-                <span style={{color: "#A3A8AE", opacity: ".6"}}>
-                  {v.tc}
                 </span>
               </div>
               <div className="glow-r" style={{border: "2px solid #E5484D", borderRadius: "6px", overflow: "hidden", background: "#101113", display: "flex", flexDirection: "column"}}>
