@@ -195,6 +195,13 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .knob::after{content:"";position:absolute;left:50%;top:4px;width:2px;height:9px;margin-left:-1px;border-radius:1px;background:#E8E6E1}
 @media (prefers-reduced-motion:reduce){*{animation:none !important}.dock{transition:none}}
 
+/* fit the multiview to the window height on desktop: the program window
+   (16:9 + shot bar) must sit above the switcher without scrolling */
+.pagepad{--dockh:154px;--fitw:calc((100vh - 232px - var(--dockh)) * 1.7778 * 1.55 + 24px)}
+@media (min-height:1000px){.pagepad{--dockh:264px}}
+@media (max-height:760px){.pagepad{--dockh:125px}}
+@media (max-height:760px) and (min-width:1041px){.dock{zoom:.8}}
+.pagepad > header,.mv{width:100%;max-width:max(640px,var(--fitw));margin-inline:auto;box-sizing:border-box}
 /* mid widths: keep the switcher inside the window */
 @media (max-width:1150px) and (min-width:761px){.dock{zoom:.9}}
 @media (max-width:1040px) and (min-width:761px){.dock{zoom:.8}}
@@ -207,7 +214,8 @@ header .cond{font-size:18px !important}
 .mv{display:flex !important;flex-direction:column;gap:16px}
 .leftcol,.right{display:contents !important}
 .pgmblock{order:1}
-.mv{width:100%;min-width:0;align-items:stretch !important}
+.mv{width:100%;min-width:0;align-items:stretch !important;max-width:none !important}
+.pagepad > header{max-width:none !important}
 .pgmblock,.crblock,.auxblock{min-width:0;max-width:100%;box-sizing:border-box}
 .sources{min-width:0;box-sizing:border-box}
 .pgmblock nav{gap:2px !important;padding:4px !important}
