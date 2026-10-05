@@ -118,9 +118,6 @@ export default function VornShots({ v }) {
             <img className="vabs vup" src="/assets/vorn-slid4_phone1.png" alt="Final design: active inspection with timer and logged items" style={{left: "31.615cqw", top: "8.333cqh", width: "21.823cqw", animationDelay: "0.5s"}} />
             <img className="vabs vright" src="/assets/vorn-slid4_ipad.png" alt="Final design on iPad: the building floor plan" style={{left: "70.833cqw", top: "36.574cqh", width: "29.167cqw", animationDelay: "0.85s"}} />
             <img className="vabs vup" src="/assets/vorn-slid4_phone4_blueprint.png" alt="Final design on phone: findings marked on the floor plan" style={{left: "61.458cqw", top: "50.000cqh", width: "12.969cqw", animationDelay: "1.1s"}} />
-            <span className="vabs vfade" style={{left: "2.500cqw", top: "91.667cqh", fontSize: "0.990cqw", color: "#6B6F75", whiteSpace: "nowrap", animationDelay: "1.3s"}}>
-              Interaction flow & layout · Team of three · .NET MAUI · Bachelor capstone, graded 9.0 · Then hired by the fire service
-            </span>
           </div>
         </div>
         </>

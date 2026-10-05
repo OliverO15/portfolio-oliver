@@ -17,12 +17,12 @@ export default function QuickFlickShots({ v }) {
       {v.qShot1 && (
         <>
         <div className={`fill ${v.trClass}`}>
-          <div className="vs">
+          <div className="vs" style={{"--qs": v.qfLeft}}>
             <img className="cover" src="/assets/qf-davinci.jpg" alt="Before: a traditional video editor with many tracks and panels" />
             <span className="qchip" style={{left: "2.5cqw", background: "rgba(17,18,20,.85)", color: "#FFFFFF"}}>
               Traditional editor
             </span>
-            <div className="fill" style={{background: "#FFFFFF", clipPath: `inset(0 0 0 ${v.qfLeft})`}}>
+            <div className="fill" style={{background: "#FFFFFF", clipPath: "inset(0 0 0 var(--qs))"}}>
               <h2 className="vabs vh" style={{left: "0", right: "0", top: "4.444cqh", textAlign: "center", fontSize: "2.917cqw", color: "#FA5FEE", whiteSpace: "nowrap"}}>
                 Simplify complex workflow
               </h2>
@@ -31,8 +31,8 @@ export default function QuickFlickShots({ v }) {
                 QuickFlick
               </span>
             </div>
-            <input className="qcmp" type="range" min="0" max="100" value={v.split} onChange={v.onSplit} aria-label="Drag to compare a traditional video editor with QuickFlick" />
-            <div className="qline" aria-hidden="true" style={{position: "absolute", top: "0", bottom: "0", left: `${v.qfLeft}`, width: "0.260cqw", marginLeft: "-0.130cqw", background: "#FA5FEE", pointerEvents: "none", zIndex: "4"}}>
+            <input className="qcmp" type="range" min="0" max="100" step="0.1" value={v.split} onChange={v.onSplit} aria-label="Drag to compare a traditional video editor with QuickFlick" />
+            <div className="qline" aria-hidden="true" style={{position: "absolute", top: "0", bottom: "0", left: "var(--qs)", width: "0.260cqw", marginLeft: "-0.130cqw", background: "#FA5FEE", pointerEvents: "none", zIndex: "4"}}>
               <span className="qknob" style={{position: "absolute", top: "50%", left: "50%", width: "3.333cqw", height: "3.333cqw", transform: "translate(-50%,-50%)", borderRadius: "50%", background: "#FA5FEE", boxShadow: "0 0.556cqh 1.667cqh rgba(17,18,20,.35)", display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" style={{width: "55%", height: "55%"}} aria-hidden="true">
                   <path d="M9 6l-6 6 6 6M15 6l6 6-6 6" />

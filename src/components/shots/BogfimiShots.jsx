@@ -55,19 +55,19 @@ export default function BogfimiShots({ v }) {
                 </li>
               </ul>
             </div>
-            <div className="vabs vright" style={{left: "39.271cqw", top: "5.093cqh", width: "57.135cqw", height: "89.815cqh", animationDelay: ".3s"}}>
+            <div className="vabs vright" style={{"--qs": v.bLeft, left: "39.271cqw", top: "5.093cqh", width: "57.135cqw", height: "89.815cqh", animationDelay: ".3s"}}>
               <img src="/assets/b-old.png" alt="Before: the old Bogfimisetrið site, a standard shop theme with prices in plain tables" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
               <span className="qchip" style={{left: "2cqw", background: "rgba(17,18,20,.85)", color: "#FFFFFF"}}>
                 Old site
               </span>
-              <div style={{position: "absolute", inset: "0", clipPath: `inset(0 0 0 ${v.bLeft})`}}>
+              <div style={{position: "absolute", inset: "0", clipPath: "inset(0 0 0 var(--qs))"}}>
                 <img src="/assets/b-new.png" alt="After: the new site with a photo hero, opening hours, prices and a booking button" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
                 <span className="qchip" style={{right: "2cqw", background: "#0077C8", color: "#FFFFFF"}}>
                   New site
                 </span>
               </div>
-              <input className="qcmp" type="range" min="0" max="100" value={v.bSplit} onChange={v.bOnSplit} aria-label="Drag to compare the old and new Bogfimisetrið site" />
-              <div className="qline" aria-hidden="true" style={{position: "absolute", top: "-2.315cqh", bottom: "-2.315cqh", left: `${v.bLeft}`, width: "0.469cqw", marginLeft: "-0.234cqw", borderRadius: "0.260cqw", background: "#0077C8", pointerEvents: "none", zIndex: "4"}}>
+              <input className="qcmp" type="range" min="0" max="100" step="0.1" value={v.bSplit} onChange={v.bOnSplit} aria-label="Drag to compare the old and new Bogfimisetrið site" />
+              <div className="qline" aria-hidden="true" style={{position: "absolute", top: "-2.315cqh", bottom: "-2.315cqh", left: "var(--qs)", width: "0.469cqw", marginLeft: "-0.234cqw", borderRadius: "0.260cqw", background: "#0077C8", pointerEvents: "none", zIndex: "4"}}>
                 <span className="qknob" style={{position: "absolute", top: "50%", left: "50%", width: "3.333cqw", height: "3.333cqw", transform: "translate(-50%,-50%)", borderRadius: "50%", background: "#0077C8", boxShadow: "0 0.556cqh 1.667cqh rgba(17,18,20,.35)", display: "flex", alignItems: "center", justifyContent: "center"}}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" style={{width: "55%", height: "55%"}} aria-hidden="true">
                     <path d="M9 6l-6 6 6 6M15 6l6 6-6 6" />

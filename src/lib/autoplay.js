@@ -15,9 +15,9 @@ export const autoplayMethods = {
       const iv = setInterval(() => {
         const k = Math.min(1, (Date.now() - t0) / ms);
         const e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-        this.setState({ [key]: Math.round(from + (to - from) * e) });
+        this.setState({ [key]: from + (to - from) * e });
         if (k >= 1) clearInterval(iv);
-      }, 30);
+      }, 16);
       this.autoT.push(iv);
     });
   },

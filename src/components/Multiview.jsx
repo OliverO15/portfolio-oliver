@@ -30,6 +30,19 @@ export default class Multiview extends Component {
     this.shotLabels = ['OPEN', 'PROBLEM', 'TRY IT', 'RESULT'];
     this.labelsFor = { vorn: ['OPEN', 'BEFORE', 'PROCESS', 'FINAL'], qf: ['OPEN', 'WORKFLOW', 'PRODUCT', 'MARKETING'], gfx: ['OPEN', 'TRY IT', 'INTERFACE', 'RESULTS'], bog: ['OPEN', 'BEFORE', 'MODULES', 'ADS'] };
   }
+  /* Before/after sliders: move the divider straight away through a CSS
+     variable, then sync React state at most once per frame. */
+  dragSplit(e, key) {
+    const val = Number(e.target.value);
+    e.target.parentElement.style.setProperty('--qs', val + '%');
+    this.pendingSplit = { key, val };
+    if (this.splitRaf) return;
+    this.splitRaf = requestAnimationFrame(() => {
+      this.splitRaf = 0;
+      const p = this.pendingSplit;
+      this.setState({ [p.key]: p.val });
+    });
+  }
   componentDidMount() {
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
     this.autoT = [];
@@ -197,7 +210,7 @@ export default class Multiview extends Component {
       bShot3: isB && shot === 3,
       bSplit: st.bSplit,
       bLeft: st.bSplit + '%',
-      bOnSplit: (e) => this.setState({ bSplit: Number(e.target.value) }),
+      bOnSplit: (e) => this.dragSplit(e, 'bSplit'),
       gfShot0: isG && shot === 0,
       gfShot1: isG && shot === 1,
       gfShot2: isG && shot === 2,
@@ -231,7 +244,7 @@ export default class Multiview extends Component {
       split: st.split,
       qfLeft: st.split + '%',
       qfRight: (100 - st.split) + '%',
-      onSplit: (e) => this.setState({ split: Number(e.target.value) }),
+      onSplit: (e) => this.dragSplit(e, 'split'),
       bBeforeCls: st.bogNew ? '' : 'on',
       bAfterCls: st.bogNew ? 'on' : '',
       bBeforePressed: st.bogNew ? 'false' : 'true',
