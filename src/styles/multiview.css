@@ -195,6 +195,12 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 .knob::after{content:"";position:absolute;left:50%;top:4px;width:2px;height:9px;margin-left:-1px;border-radius:1px;background:#E8E6E1}
 @media (prefers-reduced-motion:reduce){*{animation:none !important}.dock{transition:none}}
 
+/* mid widths: keep the switcher inside the window */
+@media (max-width:1150px) and (min-width:761px){.dock{zoom:.9}}
+@media (max-width:1040px) and (min-width:761px){.dock{zoom:.8}}
+@media (max-width:930px) and (min-width:761px){.dock{zoom:.7}}
+@media (max-width:820px) and (min-width:761px){.dock{zoom:.64}}
+@media (max-width:1180px) and (min-width:901px){.sbtn.dim .lbl{display:none}}
 @media (max-width:760px){
 .pagepad{padding:0 16px 104px !important;gap:16px !important}
 header .cond{font-size:18px !important}

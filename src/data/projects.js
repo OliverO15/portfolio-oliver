@@ -1,4 +1,4 @@
-/* Project content: titles, credits and thumbnails. Shot layouts live in Multiview.jsx. */
+/* Project content: titles, credits and thumbnails. Shot layouts live in components/shots/. */
 export const projects = [
   {
     key: 'qf', credits: ['Lead designer and frontend developer', 'Sole designer, with the CEO', 'React, TypeScript', '2023–2025'], title: 'QuickFlick', short: 'QFLICK',
