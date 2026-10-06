@@ -61,7 +61,41 @@ export default class Multiview extends Component {
     };
     for (let i = 0; i < 4; i++) next();
   }
+  /* Desktop: size the left column so the 16:9 preview monitor ends level
+     with the credits box (or, on short screens where that box is hidden,
+     with the program window). Left column grows ~1.125 px per px of width,
+     the right column shrinks ~0.5625 px, so two passes converge. */
+  alignColumns() {
+    const mv = this.root && this.root.querySelector('.mv');
+    if (!mv) return;
+    if (window.innerWidth <= 760) { mv.style.gridTemplateColumns = ''; return; }
+    const total = mv.clientWidth - 24;
+    const pvw = mv.querySelector('.pvwmon .hatch');
+    const cr = mv.querySelector('.crblock > div:last-child');
+    const crShown = cr && getComputedStyle(mv.querySelector('.crblock')).display !== 'none';
+    const target = crShown ? cr : mv.querySelector('.glow-r');
+    if (!pvw || !target) return;
+    let lw = this.leftW || total * 0.355;
+    for (let i = 0; i < 3; i++) {
+      mv.style.gridTemplateColumns = lw + 'px minmax(0,1fr)';
+      const diff = target.getBoundingClientRect().bottom - pvw.getBoundingClientRect().bottom;
+      if (Math.abs(diff) < 1) break;
+      lw = Math.min(total * 0.42, Math.max(total * 0.3, lw + diff / 1.6875));
+    }
+    this.leftW = lw;
+  }
+  componentDidUpdate(prevProps, prevState) {
+    // The shot bar appears when the first project goes on air: realign then.
+    if ((prevState.pgm === 'slate') !== (this.state.pgm === 'slate')) {
+      requestAnimationFrame(() => this.alignColumns());
+    }
+  }
   componentDidMount() {
+    this.onResize = () => { this.leftW = 0; cancelAnimationFrame(this.alignRaf); this.alignRaf = requestAnimationFrame(() => this.alignColumns()); };
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(this.onResize);
+    this.alignT = setInterval(() => this.alignColumns(), 1000);
     this.preloadT = setTimeout(() => this.preloadShots(), 600);
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
     this.autoT = [];
@@ -105,7 +139,7 @@ export default class Multiview extends Component {
     }
   }
   componentWillUnmount() {
-    clearInterval(this.timer); clearInterval(this.meterT); clearTimeout(this.preloadT); clearTimeout(this.flashT); clearTimeout(this.introT);
+    clearInterval(this.timer); clearInterval(this.meterT); clearTimeout(this.preloadT); clearInterval(this.alignT); window.removeEventListener('resize', this.onResize); clearTimeout(this.flashT); clearTimeout(this.introT);
     this.clearAutoTimers();
     if (typeof document !== 'undefined') {
       document.removeEventListener('pointerdown', this.onUser, true);
@@ -307,7 +341,7 @@ export default class Multiview extends Component {
     const u = this.under;
     const under = u && Date.now() < u.until ? this.renderVals({ ...this.state, pgm: u.pgm, shot: u.shot }, true) : null;
     return (
-      <div className="pagepad" style={{"--glow": `${v.glow}`, "--tex": `${v.tex}`, "--tsize": `${v.tsize}`, "--tcon": `${v.tcon}`, "--tbri": `${v.tbri}`, "--light": `${v.light}`, "--lamp": `${v.lamp}`, "--lx": `${v.lx}`, "--ly": `${v.ly}`, "--lw": `${v.lw}`, "--lr": `${v.lr}`, "--la": `${v.la}`, "--lhard": `${v.lhard}`, "--vig": `${v.vig}`, "--rake": `${v.rake}`, position: "relative", overflow: "hidden", minHeight: "100vh", boxSizing: "border-box", padding: "0 24px", fontFamily: "'Barlow', sans-serif", color: "#E8E6E1", background: "#121314", display: "flex", flexDirection: "column", gap: "24px"}}>
+      <div className="pagepad" ref={(el) => { this.root = el; }} style={{"--glow": `${v.glow}`, "--tex": `${v.tex}`, "--tsize": `${v.tsize}`, "--tcon": `${v.tcon}`, "--tbri": `${v.tbri}`, "--light": `${v.light}`, "--lamp": `${v.lamp}`, "--lx": `${v.lx}`, "--ly": `${v.ly}`, "--lw": `${v.lw}`, "--lr": `${v.lr}`, "--la": `${v.la}`, "--lhard": `${v.lhard}`, "--vig": `${v.vig}`, "--rake": `${v.rake}`, position: "relative", overflow: "hidden", minHeight: "100vh", boxSizing: "border-box", padding: "0 24px", fontFamily: "'Barlow', sans-serif", color: "#E8E6E1", background: "#121314", display: "flex", flexDirection: "column", gap: "24px"}}>
         <Surface v={v} />
         <Header v={v} />
         <main className="layer mv">
