@@ -200,6 +200,14 @@ a{color:#E8E6E1}a:hover{color:#FFFFFF}
 @media (max-height:760px){.pagepad{--dockh:125px}}
 @media (max-height:760px) and (min-width:1041px){.dock{zoom:.8}}
 .pagepad > header,.mv{width:100%;max-width:max(640px,var(--fitw));margin-inline:auto;box-sizing:border-box}
+/* desktop: the preview monitor stretches so the left column ends level
+   with the bottom of the right column (the contact box) */
+@media (min-width:761px){
+.mv{align-items:stretch !important}
+.leftcol{min-height:0}
+.pvwmon{flex:1;min-height:0}
+.pvwmon .hatch{flex:1;aspect-ratio:auto;min-height:120px}
+}
 /* short screens (≤900 px tall, desktop): credits move into the program
    window as a CG line, the contact box slims down, and only the switcher's
    top strip peeks until hover */
