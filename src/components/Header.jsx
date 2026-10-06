@@ -4,7 +4,7 @@ export default function Header({ v }) {
     <>
       <header className="layer" style={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px", flexWrap: "wrap", padding: "16px 0", borderBottom: "1px solid rgba(255,255,255,.07)"}}>
         <div style={{display: "flex", alignItems: "baseline", gap: "14px", flexWrap: "wrap"}}>
-          <span className="cond" style={{fontWeight: "700", fontSize: "22px", letterSpacing: ".06em", textTransform: "uppercase"}}>
+          <span className="cond" style={{fontWeight: "700", fontSize: "22px", letterSpacing: ".02em"}}>
             Oliver Ormar Ingvarsson
           </span>
           <span style={{fontSize: "15px", color: "#A3A8AE"}}>

@@ -3,6 +3,7 @@
    presentational components (./*.jsx, ./shots/*.jsx) read from. */
 import { Component, Fragment } from 'react';
 import { projects } from '../data/projects.js';
+import { preloadImages } from '../data/preload.js';
 import { graphicsDemoVals } from '../lib/graphicsDemo.js';
 import { autoplayMethods } from '../lib/autoplay.js';
 import Surface from './Surface.jsx';
@@ -43,7 +44,25 @@ export default class Multiview extends Component {
       this.setState({ [p.key]: p.val });
     });
   }
+  /* Fetch and decode every shot image in the background, a few at a time,
+     so shots don't pop in when they come on air. */
+  preloadShots() {
+    if (typeof Image === 'undefined') return;
+    const queue = preloadImages.slice();
+    this.preloaded = [];
+    const next = () => {
+      const src = queue.shift();
+      if (!src) return;
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = src;
+      this.preloaded.push(img);
+      (img.decode ? img.decode() : Promise.resolve()).catch(() => {}).then(next);
+    };
+    for (let i = 0; i < 4; i++) next();
+  }
   componentDidMount() {
+    this.preloadT = setTimeout(() => this.preloadShots(), 600);
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
     this.autoT = [];
     this.onUser = (e) => {
@@ -86,7 +105,7 @@ export default class Multiview extends Component {
     }
   }
   componentWillUnmount() {
-    clearInterval(this.timer); clearInterval(this.meterT); clearTimeout(this.flashT); clearTimeout(this.introT);
+    clearInterval(this.timer); clearInterval(this.meterT); clearTimeout(this.preloadT); clearTimeout(this.flashT); clearTimeout(this.introT);
     this.clearAutoTimers();
     if (typeof document !== 'undefined') {
       document.removeEventListener('pointerdown', this.onUser, true);

@@ -2,7 +2,7 @@
 export const projects = [
   {
     key: 'qf', credits: ['Lead designer and frontend developer', 'Sole designer, with the CEO', 'React, TypeScript', '2023–2025'], title: 'QuickFlick', short: 'QFLICK',
-    img: '/assets/qf-title.jpg', alt: 'QuickFlick logo', ltPos: 'bottom: 32px',
+    img: '/assets/qf-title.webp', alt: 'QuickFlick logo', ltPos: 'bottom: 32px',
     strap: 'AI video creation for real estate agents',
     meta: 'AI VIDEO PLATFORM · 2023–2025',
     constraint: 'Estate agents with no video experience had to make videos with an AI pipeline.',
@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     key: 'vorn', credits: ['Interaction flow and layout', 'Team of three', '.NET MAUI, Figma', '2025–2026'], title: 'Vörn', short: 'VÖRN',
-    img: '/assets/vorn-splash.jpg', alt: 'Vörn title card: flame logo over a fire service uniform, Fire Safety Inspection App', ltPos: 'bottom: 32px',
+    img: '/assets/vorn-splash.webp', alt: 'Vörn title card: flame logo over a fire service uniform, Fire Safety Inspection App', ltPos: 'bottom: 32px',
     strap: 'Fire inspection app, with Reykjavík Capital Area Fire & Rescue',
     meta: 'FIRE INSPECTION APP · 2025–2026',
     constraint: 'Inspectors use the app while moving between rooms, talking to staff and handling equipment.',
@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     key: 'gfx', credits: ['Designed and built it', 'Solo', 'Electron, React, OBS', '2023–present'], title: 'Graphics Engine', short: 'GFX',
-    img: '/assets/g-front.jpg', alt: 'Archery Broadcast Graphics Engine title card', ltPos: 'top: 28px',
+    img: '/assets/g-front.webp', alt: 'Archery Broadcast Graphics Engine title card', ltPos: 'top: 28px',
     strap: 'Live graphics for national archery championships',
     meta: 'BROADCAST GRAPHICS · 2023–PRESENT',
     constraint: 'The existing graphics package needed a dedicated Windows tower next to the stream.',
@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     key: 'bog', credits: ['Design, build, photography and ads', 'Solo, for the centre', 'React, WordPress, Noona', '2026'], title: 'Bogfimisetrið', short: 'BOGFIMI',
-    img: '/assets/b-front.jpg', alt: 'Bogfimisetrið title card', ltPos: 'bottom: 32px',
+    img: '/assets/b-front.webp', alt: 'Bogfimisetrið title card', ltPos: 'bottom: 32px',
     strap: 'Website redesign for an archery centre in Reykjavík',
     meta: 'CLIENT WEBSITE · 2026',
     constraint: 'Move bookings off the phone and onto a new online system, on a site that had to stay on WordPress.',

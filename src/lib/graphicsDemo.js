@@ -1,7 +1,7 @@
 /* State for the Graphics Engine "Try it" shot: a five-end recurve final, set points, and the operator buttons. */
   export function graphicsDemoVals(st, setState) {
-    const L = { team: 'BFB', given: 'Anna', family: 'Kristjánsdóttir', ends: [[9, 10, 9], [10, 9, 8], [9, 9, 10], [10, 10, 9], [9, 10, 10]] };
-    const R = { team: 'HRÓ', given: 'Sara', family: 'Magnúsdóttir', ends: [[10, 9, 9], [10, 10, 8], [8, 9, 9], [10, 9, 9], [9, 9, 9]] };
+    const L = { team: 'BFB', given: 'Oliver Ormar', family: 'Ingvarsson', ends: [[9, 10, 9], [10, 9, 8], [9, 9, 10], [10, 10, 9], [9, 10, 10]] };
+    const R = { team: 'HRÓ', given: 'Gunnar', family: 'Sigurðsson', ends: [[10, 9, 9], [10, 10, 8], [8, 9, 9], [10, 9, 9], [9, 9, 9]] };
     const e = st.gEnd;
     const sum = (a) => a.reduce((x, y) => x + y, 0);
     let sl = 0, sr = 0;
@@ -21,8 +21,8 @@
       winCls: isWin ? 'on' : ''
     });
     const quali = [
-      ['BFB', 'Anna Kristjánsdóttir', 571], ['HRÓ', 'Sara Magnúsdóttir', 566], ['BFB', 'Helga Jónsdóttir', 558], ['ÚLF', 'Katrín Einarsdóttir', 552],
-      ['HRÓ', 'Eva Pálsdóttir', 547], ['ÚLF', 'Lilja Gunnarsdóttir', 541], ['BFB', 'Rakel Ólafsdóttir', 533], ['HRÓ', 'Birna Sigurðardóttir', 526]
+      ['BFB', 'Oliver Ormar Ingvarsson', 571], ['HRÓ', 'Gunnar Sigurðsson', 566], ['BFB', 'Jón Helgason', 558], ['ÚLF', 'Einar Kristjánsson', 552],
+      ['HRÓ', 'Páll Ólafsson', 547], ['ÚLF', 'Davíð Magnússon', 541], ['BFB', 'Arnar Pétursson', 533], ['HRÓ', 'Bjarki Þórsson', 526]
     ].map((r, i) => ({ rank: String(i + 1), team: r[0], name: r[1], score: String(r[2]), cls: i < 2 ? 'inMatch' : '' }));
     const set = setState;
     const mode = st.gMode;

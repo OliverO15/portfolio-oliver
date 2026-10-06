@@ -6,8 +6,8 @@ export default function BogfimiShots({ v }) {
         <>
         <div className={`fill ${v.trClass}`}>
           <div className="vs" style={{background: "#DDD"}}>
-            <img className="cover vfade" src="/assets/b-bg.jpg" alt="" />
-            <img className="vabs qpop" src="/assets/b-logo.png" alt="Bogfimisetrið" style={{left: "13.021cqw", top: "13.426cqh", width: "73.906cqw", animationDelay: "0.3s"}} />
+            <img className="cover vfade" src="/assets/b-bg.webp" alt="" />
+            <img className="vabs qpop" src="/assets/b-logo.webp" alt="Bogfimisetrið" style={{left: "13.021cqw", top: "13.426cqh", width: "73.906cqw", animationDelay: "0.3s"}} />
           </div>
         </div>
         </>
@@ -56,12 +56,12 @@ export default function BogfimiShots({ v }) {
               </ul>
             </div>
             <div className="vabs vright" style={{"--qs": v.bLeft, left: "39.271cqw", top: "5.093cqh", width: "57.135cqw", height: "89.815cqh", animationDelay: ".3s"}}>
-              <img src="/assets/b-old.png" alt="Before: the old Bogfimisetrið site, a standard shop theme with prices in plain tables" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
+              <img src="/assets/b-old.webp" alt="Before: the old Bogfimisetrið site, a standard shop theme with prices in plain tables" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
               <span className="qchip" style={{left: "2cqw", background: "rgba(17,18,20,.85)", color: "#FFFFFF"}}>
                 Old site
               </span>
               <div style={{position: "absolute", inset: "0", clipPath: "inset(0 0 0 var(--qs))"}}>
-                <img src="/assets/b-new.png" alt="After: the new site with a photo hero, opening hours, prices and a booking button" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
+                <img src="/assets/b-new.webp" alt="After: the new site with a photo hero, opening hours, prices and a booking button" style={{position: "absolute", inset: "0", width: "100%", height: "100%"}} />
                 <span className="qchip" style={{right: "2cqw", background: "#0077C8", color: "#FFFFFF"}}>
                   New site
                 </span>
@@ -88,23 +88,23 @@ export default function BogfimiShots({ v }) {
               <br />
               WordPress theme
             </h2>
-            <img className="vabs vup" src="/assets/b-example.png" alt="An example page, Hópar, built from the section library" style={{left: "3.229cqw", top: "23.148cqh", width: "45.104cqw", animationDelay: "0.35s"}} />
+            <img className="vabs vup" src="/assets/b-example.webp" alt="An example page, Hópar, built from the section library" style={{left: "3.229cqw", top: "23.148cqh", width: "45.104cqw", animationDelay: "0.35s"}} />
             <div className="vabs vfade" style={{left: "50.000cqw", top: "0", width: "48.333cqw", height: "100%", overflow: "hidden", WebkitMaskImage: "linear-gradient(transparent,#000 8%,#000 92%,transparent)", maskImage: "linear-gradient(transparent,#000 8%,#000 92%,transparent)", animationDelay: ".5s"}} role="img" aria-label="Sections from the theme's library">
               <div className="bmods">
-                <img src="/assets/b-mod84.png" alt="Hero section" />
-                <img src="/assets/b-mod87.png" alt="Opening hours and prices with booking" />
-                <img src="/assets/b-mod88.png" alt="How it works, in three steps" />
-                <img src="/assets/b-mod89.png" alt="Where we are, with map" />
-                <img src="/assets/b-mod90.png" alt="Group booking guidelines" />
-                <img src="/assets/b-mod91.png" alt="Questions and contact" />
-                <img src="/assets/b-mod92.png" alt="Partner club" />
-                <img src="/assets/b-mod84.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod87.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod88.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod89.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod90.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod91.png" alt="" aria-hidden="true" />
-                <img src="/assets/b-mod92.png" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod84.webp" alt="Hero section" />
+                <img src="/assets/b-mod87.webp" alt="Opening hours and prices with booking" />
+                <img src="/assets/b-mod88.webp" alt="How it works, in three steps" />
+                <img src="/assets/b-mod89.webp" alt="Where we are, with map" />
+                <img src="/assets/b-mod90.webp" alt="Group booking guidelines" />
+                <img src="/assets/b-mod91.webp" alt="Questions and contact" />
+                <img src="/assets/b-mod92.webp" alt="Partner club" />
+                <img src="/assets/b-mod84.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod87.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod88.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod89.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod90.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod91.webp" alt="" aria-hidden="true" />
+                <img src="/assets/b-mod92.webp" alt="" aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -118,11 +118,11 @@ export default function BogfimiShots({ v }) {
             <h2 className="vabs vh vup" style={{left: "3.646cqw", top: "6.111cqh", fontSize: "2.604cqw", fontWeight: "500", whiteSpace: "nowrap", animationDelay: ".15s"}}>
               Advertising & Conversion Tracking
             </h2>
-            <img className="vabs vup" src="/assets/b-ad-45.png" alt="Ad, 4:5: Prófaðu Bogfimi!" style={{left: "3.542cqw", top: "15.463cqh", width: "21.458cqw", animationDelay: "0.35s"}} />
-            <img className="vabs vup" src="/assets/b-ad-11.png" alt="Ad, 1:1: Vinahópurinn í bogfimi" style={{left: "26.510cqw", top: "15.463cqh", width: "27.031cqw", animationDelay: "0.5s"}} />
-            <img className="vabs vup" src="/assets/b-ad-wide.png" alt="Wide ad: Prófaðu Bogfimi!" style={{left: "3.542cqw", top: "65.833cqh", width: "45.938cqw", animationDelay: "0.65s"}} />
-            <img className="vabs vfade" src="/assets/b-noona-logo.png" alt="Noona HQ" style={{left: "57.292cqw", top: "16.852cqh", width: "9.896cqw", animationDelay: "0.9s"}} />
-            <img className="vabs vright" src="/assets/b-noona-results.png" alt="Noona HQ, September 2026: 148 bookings, by origin HQ 73, Noona 53, booking link 22" style={{left: "57.135cqw", top: "22.593cqh", width: "40.208cqw", animationDelay: "0.9s"}} />
+            <img className="vabs vup" src="/assets/b-ad-45.webp" alt="Ad, 4:5: Prófaðu Bogfimi!" style={{left: "3.542cqw", top: "15.463cqh", width: "21.458cqw", animationDelay: "0.35s"}} />
+            <img className="vabs vup" src="/assets/b-ad-11.webp" alt="Ad, 1:1: Vinahópurinn í bogfimi" style={{left: "26.510cqw", top: "15.463cqh", width: "27.031cqw", animationDelay: "0.5s"}} />
+            <img className="vabs vup" src="/assets/b-ad-wide.webp" alt="Wide ad: Prófaðu Bogfimi!" style={{left: "3.542cqw", top: "65.833cqh", width: "45.938cqw", animationDelay: "0.65s"}} />
+            <img className="vabs vfade" src="/assets/b-noona-logo.webp" alt="Noona HQ" style={{left: "57.292cqw", top: "16.852cqh", width: "9.896cqw", animationDelay: "0.9s"}} />
+            <img className="vabs vright" src="/assets/b-noona-results.webp" alt="Noona HQ, September 2026: 148 bookings, by origin HQ 73, Noona 53, booking link 22" style={{left: "57.135cqw", top: "22.593cqh", width: "40.208cqw", animationDelay: "0.9s"}} />
             <p className="vabs vup" style={{margin: "0", left: "58.646cqw", top: "87.037cqh", fontSize: "2.604cqw", fontWeight: "500", whiteSpace: "nowrap", animationDelay: "1.3s"}}>
               Already half of bookings online
             </p>

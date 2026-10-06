@@ -4,6 +4,11 @@ import { Fragment } from 'react';
 export default function Sources({ v }) {
   return (
     <>
+      <div className="srcblock" style={{display: "flex", flexDirection: "column", gap: "8px"}}>
+      <div className="srclabel mono" style={{display: "flex", justifyContent: "space-between", fontSize: "13px"}}>
+        <span style={{color: "#A3A8AE", opacity: ".75"}}>SOURCES</span>
+        <span style={{color: "#A3A8AE", opacity: ".5"}}>4 PROJECTS</span>
+      </div>
       <section className="sources" aria-label="Projects">
         {(v.sources || []).map((s, sIdx) => (
           <Fragment key={sIdx}>
@@ -25,6 +30,7 @@ export default function Sources({ v }) {
           </Fragment>
         ))}
       </section>
+      </div>
     </>
   );
 }

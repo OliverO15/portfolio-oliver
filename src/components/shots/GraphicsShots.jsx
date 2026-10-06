@@ -8,7 +8,7 @@ export default function GraphicsShots({ v }) {
         <>
         <div className={`fill ${v.trClass}`}>
           <div className="vs" style={{background: "#1F1F1F", color: "#FFFFFF"}}>
-            <img className="cover vfade" src="/assets/g-main-blur.jpg" alt="" />
+            <img className="cover vfade" src="/assets/g-main-blur.webp" alt="" />
             <div className="fill" style={{background: "rgba(0,0,0,.12)"}} />
             <h2 className="vabs vh" style={{left: "0", right: "0", top: "34.722cqh", textAlign: "center", fontSize: "7.812cqw", lineHeight: "1.12", textShadow: "0 0.370cqh 2.778cqh rgba(0,0,0,.25)"}}>
               <span className="vup" style={{display: "block", animationDelay: ".3s"}}>
@@ -27,14 +27,14 @@ export default function GraphicsShots({ v }) {
         <div className={`fill ${v.trClass}`} style={{background: "#101113", display: "flex", flexDirection: "column"}}>
           <div style={{position: "relative", flexGrow: "1"}}>
             <div className="gx">
-              <img className="cover" src="/assets/g-main.jpg" alt="An archer at full draw during a competition" />
+              <img className="cover" src="/assets/g-main.webp" alt="An archer at full draw during a competition" />
               <div className={`gx-mp c g5 ${v.gPresCls}`} aria-hidden={v.gPresHidden}>
                 <div className="gx-cne c">
                   <div className="gx-ch">
                     Íslandsmeistaramót Innandyra 2026
                   </div>
                   <div className="gx-eh">
-                    Recurve Women - Gold Medal Match
+                    Recurve Men - Gold Medal Match
                   </div>
                 </div>
                 <div className="r g5">
@@ -83,7 +83,7 @@ export default function GraphicsShots({ v }) {
                       Íslandsmeistaramót Innandyra 2026
                     </div>
                     <div className="gx-eh">
-                      Recurve Women - Qualification Results
+                      Recurve Men - Qualification Results
                     </div>
                   </div>
                   <div className="c g0">
@@ -112,7 +112,7 @@ export default function GraphicsShots({ v }) {
               </div>
               <div className={`gx-sc c g5 ${v.gScMode} ${v.gScCls}`} aria-hidden={v.gScHidden}>
                 <div className={`gx-hdr ${v.gHdrCls}`}>
-                  Recurve Women Gold Medal Match
+                  Recurve Men Gold Medal Match
                 </div>
                 <div className="r g5">
                   <div className={`gx-t r g0 ${v.gL.cls}`}>
@@ -250,8 +250,8 @@ export default function GraphicsShots({ v }) {
         <>
         <div className={`fill ${v.trClass}`}>
           <div className="vs" style={{background: "#1F1F1F", color: "#FFFFFF"}}>
-            <img className="vabs vleft" src="/assets/g-laptop.png" alt="The operator panel on a 13-inch laptop next to OBS" style={{left: "1.250cqw", top: "11.852cqh", width: "45.729cqw", animationDelay: "0.2s"}} />
-            <img className="vabs vright" src="/assets/g-interface.png" alt="The operator panel: competition, match info, round controller and match facts" style={{left: "37.917cqw", top: "6.574cqh", width: "59.115cqw", animationDelay: "0.5s"}} />
+            <img className="vabs vleft" src="/assets/g-laptop.webp" alt="The operator panel on a 13-inch laptop next to OBS" style={{left: "1.250cqw", top: "11.852cqh", width: "45.729cqw", animationDelay: "0.2s"}} />
+            <img className="vabs vright" src="/assets/g-interface.webp" alt="The operator panel: competition, match info, round controller and match facts" style={{left: "37.917cqw", top: "6.574cqh", width: "59.115cqw", animationDelay: "0.5s"}} />
             <p className="vabs vup" style={{margin: "0", left: "5.365cqw", top: "87.778cqh", fontSize: "2.812cqw", fontWeight: "300", whiteSpace: "nowrap", animationDelay: "1s"}}>
               Interface adaptable for limited screen space
             </p>
@@ -309,42 +309,42 @@ export default function GraphicsShots({ v }) {
             </div>
             <div className="vabs vfade" style={{left: "0", right: "0", top: "55.556cqh", overflow: "hidden", animationDelay: "1s"}} aria-label="Thumbnails made for the channel" role="img">
               <div className="gtick">
-                <img src="/assets/t-B_T_G_2.jpg" alt="Barebow team gold medal match" />
-                <img src="/assets/t-Compound_Finals.jpg" alt="Compound finals, live" />
-                <img src="/assets/t-D1_Finals.jpg" alt="Indoor youth championship finals, live" />
-                <img src="/assets/t-D2_Finals.jpg" alt="Outdoor youth championship finals, live" />
-                <img src="/assets/t-L_M_B.jpg" alt="Longbow men bronze medal match" />
-                <img src="/assets/t-L_T_G.jpg" alt="Longbow team gold medal match" />
-                <img src="/assets/t-R_T_G.jpg" alt="Recurve team gold medal match" />
-                <img src="/assets/t-U18_Quali.jpg" alt="Youth qualification, live" />
-                <img src="/assets/t-B_T_G_2.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-Compound_Finals.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-D1_Finals.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-D2_Finals.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-L_M_B.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-L_T_G.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-R_T_G.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-U18_Quali.jpg" alt="" aria-hidden="true" />
+                <img src="/assets/t-B_T_G_2.webp" alt="Barebow team gold medal match" />
+                <img src="/assets/t-Compound_Finals.webp" alt="Compound finals, live" />
+                <img src="/assets/t-D1_Finals.webp" alt="Indoor youth championship finals, live" />
+                <img src="/assets/t-D2_Finals.webp" alt="Outdoor youth championship finals, live" />
+                <img src="/assets/t-L_M_B.webp" alt="Longbow men bronze medal match" />
+                <img src="/assets/t-L_T_G.webp" alt="Longbow team gold medal match" />
+                <img src="/assets/t-R_T_G.webp" alt="Recurve team gold medal match" />
+                <img src="/assets/t-U18_Quali.webp" alt="Youth qualification, live" />
+                <img src="/assets/t-B_T_G_2.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-Compound_Finals.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-D1_Finals.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-D2_Finals.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-L_M_B.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-L_T_G.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-R_T_G.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-U18_Quali.webp" alt="" aria-hidden="true" />
               </div>
             </div>
             <div className="vabs vfade" style={{left: "0", right: "0", top: "78.241cqh", overflow: "hidden", animationDelay: "1.15s"}} aria-hidden="true">
               <div className="gtick rev">
-                <img src="/assets/t-L_M_B.jpg" alt="Longbow men bronze medal match" />
-                <img src="/assets/t-L_T_G.jpg" alt="Longbow team gold medal match" />
-                <img src="/assets/t-R_T_G.jpg" alt="Recurve team gold medal match" />
-                <img src="/assets/t-U18_Quali.jpg" alt="Youth qualification, live" />
-                <img src="/assets/t-B_T_G_2.jpg" alt="Barebow team gold medal match" />
-                <img src="/assets/t-Compound_Finals.jpg" alt="Compound finals, live" />
-                <img src="/assets/t-D1_Finals.jpg" alt="Indoor youth championship finals, live" />
-                <img src="/assets/t-D2_Finals.jpg" alt="Outdoor youth championship finals, live" />
-                <img src="/assets/t-L_M_B.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-L_T_G.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-R_T_G.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-U18_Quali.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-B_T_G_2.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-Compound_Finals.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-D1_Finals.jpg" alt="" aria-hidden="true" />
-                <img src="/assets/t-D2_Finals.jpg" alt="" aria-hidden="true" />
+                <img src="/assets/t-L_M_B.webp" alt="Longbow men bronze medal match" />
+                <img src="/assets/t-L_T_G.webp" alt="Longbow team gold medal match" />
+                <img src="/assets/t-R_T_G.webp" alt="Recurve team gold medal match" />
+                <img src="/assets/t-U18_Quali.webp" alt="Youth qualification, live" />
+                <img src="/assets/t-B_T_G_2.webp" alt="Barebow team gold medal match" />
+                <img src="/assets/t-Compound_Finals.webp" alt="Compound finals, live" />
+                <img src="/assets/t-D1_Finals.webp" alt="Indoor youth championship finals, live" />
+                <img src="/assets/t-D2_Finals.webp" alt="Outdoor youth championship finals, live" />
+                <img src="/assets/t-L_M_B.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-L_T_G.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-R_T_G.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-U18_Quali.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-B_T_G_2.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-Compound_Finals.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-D1_Finals.webp" alt="" aria-hidden="true" />
+                <img src="/assets/t-D2_Finals.webp" alt="" aria-hidden="true" />
               </div>
             </div>
           </div>

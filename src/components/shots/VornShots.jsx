@@ -6,9 +6,9 @@ export default function VornShots({ v }) {
         <>
         <div className={`fill ${v.trClass}`}>
           <div className="vs" style={{background: "#101113"}}>
-            <img className="cover" src="/assets/vorn-bg.jpg" alt="" />
-            <img className="vabs vup" src="/assets/vorn-slid1_phone.png" alt="Vörn home screen: today's inspections with status and a start button" style={{left: "38.281cqw", top: "7.407cqh", width: "23.438cqw", animationDelay: "2.05s"}} />
-            <img className="cover vcutout" src="/assets/vorn-splash.jpg" alt="Vörn, Fire Safety Inspection App" style={{animationDelay: "2s"}} />
+            <img className="cover" src="/assets/vorn-bg.webp" alt="" />
+            <img className="vabs vup" src="/assets/vorn-slid1_phone.webp" alt="Vörn home screen: today's inspections with status and a start button" style={{left: "38.281cqw", top: "7.407cqh", width: "23.438cqw", animationDelay: "2.05s"}} />
+            <img className="cover vcutout" src="/assets/vorn-splash.webp" alt="Vörn, Fire Safety Inspection App" style={{animationDelay: "2s"}} />
           </div>
         </div>
         </>
@@ -51,8 +51,8 @@ export default function VornShots({ v }) {
                 </li>
               </ul>
             </div>
-            <img className="vabs vup" src="/assets/vorn-slid2_phone1.png" alt="Original app: a long list of inspection categories with counts" style={{left: "48.021cqw", top: "7.963cqh", width: "22.292cqw", animationDelay: "0.5s"}} />
-            <img className="vabs vup" src="/assets/vorn-slid2_phone2.png" alt="Original app: a list of inspections with raw field values" style={{left: "73.646cqw", top: "7.963cqh", width: "22.292cqw", animationDelay: "0.7s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid2_phone1.webp" alt="Original app: a long list of inspection categories with counts" style={{left: "48.021cqw", top: "7.963cqh", width: "22.292cqw", animationDelay: "0.5s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid2_phone2.webp" alt="Original app: a list of inspections with raw field values" style={{left: "73.646cqw", top: "7.963cqh", width: "22.292cqw", animationDelay: "0.7s"}} />
           </div>
         </div>
         </>
@@ -66,10 +66,10 @@ export default function VornShots({ v }) {
                 Map the flow. Set the look. Test in lo-fi.
               </h2>
             </div>
-            <img className="vabs vrise" src="/assets/vorn-slid3_map.png" alt="Flow diagram of the new inspection flow" style={{left: "2.344cqw", top: "19.444cqh", width: "53.177cqw", animationDelay: "0.5s"}} />
-            <img className="vabs vrise" src="/assets/vorn-slid3_inspo.png" alt="Mood board of reference apps" style={{left: "57.500cqw", top: "19.444cqh", width: "20.885cqw", animationDelay: "0.85s"}} />
-            <img className="vabs vrise" src="/assets/vorn-slid3_colors.png" alt="Colour palette, type and icons" style={{left: "6.458cqw", top: "49.722cqh", width: "23.958cqw", animationDelay: "1.2s"}} />
-            <img className="vabs vrise" src="/assets/vorn-slid3_lofi.png" alt="Lo-fi screens: home, inspection, floor plan and an item detail" style={{left: "34.740cqw", top: "36.204cqh", width: "60.573cqw", animationDelay: "1.55s"}} />
+            <img className="vabs vrise" src="/assets/vorn-slid3_map.webp" alt="Flow diagram of the new inspection flow" style={{left: "2.344cqw", top: "19.444cqh", width: "53.177cqw", animationDelay: "0.5s"}} />
+            <img className="vabs vrise" src="/assets/vorn-slid3_inspo.webp" alt="Mood board of reference apps" style={{left: "57.500cqw", top: "19.444cqh", width: "20.885cqw", animationDelay: "0.85s"}} />
+            <img className="vabs vrise" src="/assets/vorn-slid3_colors.webp" alt="Colour palette, type and icons" style={{left: "6.458cqw", top: "49.722cqh", width: "23.958cqw", animationDelay: "1.2s"}} />
+            <img className="vabs vrise" src="/assets/vorn-slid3_lofi.webp" alt="Lo-fi screens: home, inspection, floor plan and an item detail" style={{left: "34.740cqw", top: "36.204cqh", width: "60.573cqw", animationDelay: "1.55s"}} />
             <span className="vabs vwipe" style={{left: "3.385cqw", top: "21.111cqh", padding: "0.741cqh 0.833cqw", background: "#101720", color: "#FFFFFF", fontSize: "1.146cqw", fontWeight: "500", whiteSpace: "nowrap", animationDelay: "0.85s"}}>
               Workflow map
             </span>
@@ -113,11 +113,11 @@ export default function VornShots({ v }) {
                 </li>
               </ul>
             </div>
-            <img className="vabs vup" src="/assets/vorn-slid4_phone3.png" alt="Final design: photo capture screen" style={{left: "0.000cqw", top: "10.185cqh", width: "11.302cqw", animationDelay: "0.2s"}} />
-            <img className="vabs vup" src="/assets/vorn-slid4_phone2.png" alt="Final design: inspection summary with logged items and their status" style={{left: "12.292cqw", top: "10.185cqh", width: "18.698cqw", animationDelay: "0.35s"}} />
-            <img className="vabs vup" src="/assets/vorn-slid4_phone1.png" alt="Final design: active inspection with timer and logged items" style={{left: "31.615cqw", top: "8.333cqh", width: "21.823cqw", animationDelay: "0.5s"}} />
-            <img className="vabs vright" src="/assets/vorn-slid4_ipad.png" alt="Final design on iPad: the building floor plan" style={{left: "70.833cqw", top: "36.574cqh", width: "29.167cqw", animationDelay: "0.85s"}} />
-            <img className="vabs vup" src="/assets/vorn-slid4_phone4_blueprint.png" alt="Final design on phone: findings marked on the floor plan" style={{left: "61.458cqw", top: "50.000cqh", width: "12.969cqw", animationDelay: "1.1s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid4_phone3.webp" alt="Final design: photo capture screen" style={{left: "0.000cqw", top: "10.185cqh", width: "11.302cqw", animationDelay: "0.2s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid4_phone2.webp" alt="Final design: inspection summary with logged items and their status" style={{left: "12.292cqw", top: "10.185cqh", width: "18.698cqw", animationDelay: "0.35s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid4_phone1.webp" alt="Final design: active inspection with timer and logged items" style={{left: "31.615cqw", top: "8.333cqh", width: "21.823cqw", animationDelay: "0.5s"}} />
+            <img className="vabs vright" src="/assets/vorn-slid4_ipad.webp" alt="Final design on iPad: the building floor plan" style={{left: "70.833cqw", top: "36.574cqh", width: "29.167cqw", animationDelay: "0.85s"}} />
+            <img className="vabs vup" src="/assets/vorn-slid4_phone4_blueprint.webp" alt="Final design on phone: findings marked on the floor plan" style={{left: "61.458cqw", top: "50.000cqh", width: "12.969cqw", animationDelay: "1.1s"}} />
           </div>
         </div>
         </>
