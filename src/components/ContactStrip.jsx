@@ -14,10 +14,10 @@ export default function ContactStrip({ v }) {
             <a href="mailto:oliverormar5@gmail.com">
               oliverormar5@gmail.com
             </a>
-            <a href="https://linkedin.com/in/oliver-ormar-ingvarsson">
+            <a href="https://www.linkedin.com/in/oliver-ormar-ingvarsson-625961174" target="_blank" rel="noopener">
               LinkedIn
             </a>
-            <a href="#">
+            <a href="/Oliver_Ormar_Ingvarsson_CV.pdf" target="_blank" rel="noopener">
               CV (PDF)
             </a>
           </div>
