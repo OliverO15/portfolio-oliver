@@ -100,7 +100,9 @@ export default class Multiview extends Component {
     this.introT = setTimeout(() => this.setState({ intro: false }), 3400);
     this.autoT = [];
     this.onUser = (e) => {
-      if (e.target && e.target.closest && e.target.closest('[data-auto]')) return;
+      const t = e.target && e.target.closest ? e.target : null;
+      // Only real controls stop auto; background clicks and stray keys don't.
+      if (!t || t.closest('[data-auto]') || !t.closest('button, a, input, select, textarea, [role="button"]')) return;
       if (this.state.auto || this.autoPending) this.stopAuto();
     };
     this.onVis = () => {
